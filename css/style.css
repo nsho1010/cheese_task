@@ -67,15 +67,16 @@ header {
 
 header li:hover {
 	transform: rotate(12deg);
+	color: #6a6a10;
+	border-bottom: 1px solid black;
 }
 
 .header_logo {
-	height: 50px;
+	padding-left: 40px;
 }
 
-.main_image {
-	width: 100%;
-	margin-top: 80px;
+.header_logo img {
+	height: 50px;
 }
 
 .main_image h1 {
@@ -87,13 +88,14 @@ header li:hover {
 }
 
 nav {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+	width: 100%;
 }
 
 nav ul {
 	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding-right: 30px;
 }
 
 nav ul a {
@@ -102,10 +104,9 @@ nav ul a {
 }
 
 nav ul li {
-	margin: 40px;
+	margin: 20px;
+	font-size: 18px;
 }
-
-
 
 
 .main_image {
@@ -113,6 +114,8 @@ nav ul li {
 	background-size: cover;
 	background-position: center;
 	height: 600px;
+	width: 100%;
+	margin-top: 80px;
 
 	display: flex;
 	justify-content: center;
@@ -130,7 +133,6 @@ nav ul li {
 
 	margin-bottom: 0.2rem;
 	padding: 1rem 1rem calc(1rem + 10px);
-	background: #8f918a;
 	/* background: #3B3937; */
 	color: white;
 	text-shadow:
@@ -147,7 +149,6 @@ nav ul li {
 	font-weight: bold;
 	text-align: center;
 	border-radius: 20px;
-	background-color: rgba(255, 255, 0, 0.5);
 }
 
 
@@ -163,7 +164,7 @@ nav ul li {
 }
 
 .about_text h2 {
-	font-size: 24px;
+	font-size: 40px;
 	color: #ffd61a;
 	margin-top: 120px;
 	margin-bottom: 24px;
@@ -217,8 +218,8 @@ nav ul li {
 }
 
 .course_top_text h2 {
-	font-size: 24px;
-	color: #222222;
+	font-size: 40px;
+	color: #ffd61a;
 	margin-bottom: 32px;
 }
 
@@ -264,6 +265,10 @@ nav ul li {
 .news_text {
 	margin-top: 64px;
 	margin-bottom: 64px;
+}
+
+#ticKer {
+	box-shadow: 1px 5px 4px rgb(118, 112, 112);
 }
 
 
@@ -314,7 +319,12 @@ nav ul li {
 
 
 .news_text h2 {
+	font-size: 40px;
 	color: #ffd61a;
+}
+
+.news_text p {
+	text-align: center;
 }
 
 .news_list {
@@ -327,6 +337,7 @@ nav ul li {
 
 .news_item img {
 	width: 100%;
+	filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.9));
 }
 
 .news_date {
@@ -371,6 +382,11 @@ nav ul li {
 	text-align: center;
 }
 
+.access_title {
+	font-size: 40px;
+	color: #ffd61a;
+}
+
 .access_text h2 {
 	margin-bottom: 24px;
 }
@@ -403,6 +419,11 @@ td {
 	text-align: center;
 	margin-bottom: 80px;
 	margin-top: 60px;
+}
+
+.contact_title {
+	font-size: 40px;
+	color: #ffd61a;
 }
 
 span {
@@ -537,6 +558,11 @@ button:active {
 
 /* footer
 ---------------------*/
+
+.sns img {
+	margin-left: 15px;
+	margin-bottom: 20px;
+}
 
 footer {
 	background-color: #707070;
