@@ -1,0 +1,459 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+
+
+
+
+-----------------*/
+html {
+	scroll-behavior: smooth;
+}
+
+
+
+
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+
+
+
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+
+/* header
+---------------------*/
+.header_image {
+	background: url(../img/mainbg.png);
+	background-size: cover;
+	background-position: center;
+	height: 360px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: aliceblue;
+}
+
+.header_image h1,
+.header_image p {
+	animation-name: fadein;
+	animation-duration: 4s;
+
+	margin-bottom: 0.2rem;
+	padding: 1rem 1rem calc(1rem + 10px);
+	background: #8f918a;
+	/* background: #3B3937; */
+	color: white;
+	text-shadow:
+		-1px 1px #999,
+		-2px 2px #888,
+		-3px 3px #777,
+		-4px 4px #666,
+		-5px 5px #555,
+		-6px 6px #444,
+		-7px 7px #333,
+		-8px 8px #222,
+		-9px 9px #111,
+		-10px 10px 5px #FFFF00;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 0, 0.5);
+}
+
+.header_nav {
+	height: 80px;
+	font-size: 21px;
+	border-bottom: 1px solid #efefef;
+}
+
+.header_nav li:hover {
+	transform: rotate(12deg);
+
+}
+
+.header_logo {
+	height: 50px;
+}
+
+.header_image h1 {
+	font-size: 48px;
+}
+
+.header_image p {
+	font-size: 36px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+nav ul {
+	display: flex;
+}
+
+nav ul a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav ul li {
+	margin: 40px;
+}
+
+/* about
+---------------------*/
+
+.about_text {
+	text-align: center;
+}
+
+.about_text h2 {
+	font-size: 24px;
+	color: #ffd61a;
+	margin-top: 120px;
+	margin-bottom: 24px;
+
+	animation: 3s linear infinite rotation1;
+}
+
+.description p:nth-child(1) {
+	margin-bottom: 64px;
+}
+
+.description p:nth-child(2) {
+	margin-bottom: 40px;
+}
+
+.description p:nth-child(3) {
+	margin-bottom: 40px;
+}
+
+.description p:last-child {
+	margin-bottom: 80px;
+}
+
+.about_image img {
+	width: 100%;
+}
+
+
+/* course
+---------------------*/
+
+.course_top_text {
+	text-align: center;
+	margin-top: 64px;
+	margin-bottom: 64px;
+}
+
+.course_top_text h2 {
+	font-size: 24px;
+	color: #222222;
+	margin-bottom: 32px;
+}
+
+.course_item {
+	display: flex;
+}
+
+.course_item img {
+	width: 50%;
+}
+
+.course_item_description {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: aliceblue;
+}
+
+.course_item_description h3 {
+	font-size: 24px;
+	color: #222222;
+	margin-bottom: 40px;
+}
+
+#course li:nth-child(even) {
+	flex-direction: row-reverse;
+}
+
+/* news
+---------------------*/
+
+#news {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 48px;
+}
+
+.news_text {
+	margin-top: 64px;
+	margin-bottom: 64px;
+}
+
+.news_text h2 {
+	color: #ffd61a;
+}
+
+.news_list {
+	display: flex;
+}
+
+.news_item {
+	margin-left: 20px;
+}
+
+.news_item img {
+	width: 100%;
+}
+
+.news_date {
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+.more {
+	background-color: #ffd61a;
+	width: 300px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 21px;
+	margin-top: 56px;
+	color: #efefef;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.more a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* access
+---------------------*/
+
+#access {
+	background-color: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.access_text {
+	margin-top: 64px;
+	margin-bottom: 64px;
+	text-align: center;
+}
+
+.access_text h2 {
+	margin-bottom: 24px;
+}
+
+iframe {
+	height: 380px;
+}
+
+table {
+	margin-top: 64px;
+	margin-bottom: 80px;
+}
+
+th {
+	font-weight: lighter;
+	text-align: left;
+}
+
+td {
+	padding-left: 48px;
+	padding-bottom: 24px;
+}
+
+/* contact
+---------------------*/
+
+.contact_text {
+	text-align: center;
+	margin-bottom: 80px;
+	margin-top: 60px;
+}
+
+span {
+	background-color: red;
+	padding: 4px;
+	border-radius: 4px;
+	color: whitesmoke;
+}
+
+.contact_title {
+	margin-bottom: 20px;
+}
+
+
+.contact_text p:nth-child(2) {
+	margin-bottom: 40px;
+}
+
+.contact_text p:nth-child(3) {
+	margin-bottom: 32px;
+}
+
+.contact_text p:nth-child(4) {
+	margin-bottom: 80px;
+}
+
+
+.name,
+.kana,
+.email {
+	display: flex;
+	justify-content: center;
+}
+
+.form {
+	margin-left: 120px;
+	border: 1px solid #737373;
+	width: 390px;
+	margin-bottom: 24px;
+}
+
+label {
+	width: 160px;
+}
+
+.checkbox {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.check {
+	width: 390px;
+	margin-left: 120px;
+}
+
+.check p {
+	margin-bottom: 24px;
+}
+
+.textarea {
+	display: flex;
+	justify-content: center;
+	margin-top: 32px;
+}
+
+.form input {
+	width: 100%;
+	height: 36px;
+}
+
+textarea {
+	width: 390px;
+	height: 108px;
+	margin-left: 120px;
+	border: 1px solid #737373;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+
+
+
+}
+
+
+button {
+	background-color: #ffd61a;
+	border: 1px solid #ffd61a;
+	width: 298px;
+	height: 54px;
+	color: #efefef;
+	font-size: 18px;
+	margin-top: 40px;
+	margin-bottom: 150px;
+	border-radius: 30px;
+	box-shadow: 0 5px 0 #ca1c30;
+	cursor: pointer;
+}
+
+button:active {
+	box-shadow: none;
+	transform: translateY(5px);
+}
+
+/* footer
+---------------------*/
+
+footer {
+	background-color: #707070;
+	color: #efefef;
+	font-size: 18px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	text-align: center;
+}
+
+
+
+
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 10;
+		transform: translateY(0);
+	}
+}
+
+
+
+@keyframes rotation1 {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotateY(360deg);
+	}
+}
