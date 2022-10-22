@@ -5,7 +5,10 @@
 
 
 
+
 -----------------*/
+
+
 html {
 	scroll-behavior: smooth;
 }
@@ -52,19 +55,20 @@ body {
 	background: url(../img/mainbg.png);
 	background-size: cover;
 	background-position: center;
-	height: 360px;
+	height: 600px;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	color: aliceblue;
+
 }
 
 .header_image h1,
 .header_image p {
-	animation-name: fadein;
-	animation-duration: 4s;
+	animation-name: fadeIn;
+	animation-duration: 2s;
 
 	margin-bottom: 0.2rem;
 	padding: 1rem 1rem calc(1rem + 10px);
@@ -92,6 +96,11 @@ body {
 	height: 80px;
 	font-size: 21px;
 	border-bottom: 1px solid #efefef;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10000;
+	background-color: white;
 }
 
 .header_nav li:hover {
@@ -162,6 +171,20 @@ nav ul li {
 	margin-bottom: 80px;
 }
 
+.description {
+	animation: slideIn 9s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+}
+
+.about_movie {
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.about_movie iframe {
+	width: 60%;
+	height: 500px;
+}
+
 .about_image img {
 	width: 100%;
 }
@@ -224,6 +247,53 @@ nav ul li {
 	margin-top: 64px;
 	margin-bottom: 64px;
 }
+
+
+#wrapper {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 30px auto;
+}
+
+#title {
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0 0 20px 0;
+}
+
+#ticKer {
+	border-radius: 20px;
+	/* 角丸ボーダー */
+	width: 500px;
+	/* 横幅 */
+	background: #ffd61a;
+	/* 背景色 */
+	position: relative;
+	/* 相対配置（相対位置）*/
+	overflow: hidden;
+	/* はみ出た部分を非表示 */
+	margin: 0 auto;
+}
+
+#ticKer ul {
+	padding: 0;
+	/* 内側余白*/
+	margin: 0 auto;
+}
+
+#ticKer li {
+	list-style-type: none;
+	/* リストマーク なし */
+	line-height: 2.5em;
+	padding-left: 25px;
+	color: #000;
+	font-weight: 400;
+	font-size: 16px;
+	text-align: left;
+}
+
+
 
 .news_text h2 {
 	color: #ffd61a;
@@ -432,12 +502,13 @@ footer {
 
 
 
+/* アニメーション
+---------------------*/
 
-
-@keyframes fadein {
+@keyframes fadeIn {
 	from {
 		opacity: 0;
-		transform: translateY(20px);
+		transform: translateY(90px);
 	}
 
 	to {
@@ -455,5 +526,21 @@ footer {
 
 	100% {
 		transform: rotateY(360deg);
+	}
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateX(180px);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+
+	40%,
+	100% {
+		opacity: 1;
 	}
 }
