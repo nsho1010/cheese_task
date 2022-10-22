@@ -32,3 +32,5 @@ function cngLi() { // メッセージの移動
     elm = liList[0];// 最上部の "li"要素
     base.appendChild(elm); // elm を子ノードとして末尾に移動する。
 }
+
+
