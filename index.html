@@ -69,9 +69,41 @@
                     </div>
                 </div>
             </div>
-            <div class="about_image">
-                <img src="./img/about-image.jpg" alt="ABOUT画像">
+
+
+            <div class="scroll">
+                <ul class="scroll-list">
+                    <li>
+                        <img src="./img/about_01.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/about_02.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/about_03.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/about_04.jpg" alt="">
+                    </li>
+                </ul>
+                <ul class="scroll-list">
+                    <li>
+                        <img src="./img/about_01.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/about_02.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/about_03.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/about_04.jpg" alt="">
+                    </li>
+
+                </ul>
             </div>
+
+
         </section>
 
         <section id="course">
@@ -147,6 +179,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="more">
                 <a href="#">MORE</a>
             </div>
@@ -200,32 +233,36 @@
             <form action="#" method="post">
                 <div class="name">
                     <label for="name">名前<span>必須</span></label>
-                    <div class="form"><input type="text" id="name" required placeholder="チーズ 太郎"></div>
+                    <div class="form"><input type="text" name="name" id="name" required placeholder="チーズ 太郎"></div>
                 </div>
 
                 <div class="kana">
                     <label for="kana">カナ<span>必須</span></label>
-                    <div class="form"><input type="text" id="kana" required placeholder="チーズ タロウ"></div>
+                    <div class="form"><input type="text" name="kana" id="kana" required placeholder="チーズ タロウ"></div>
                 </div>
 
                 <div class="email">
                     <label for="email">メールアドレス<span>必須</span></label>
-                    <div class="form"><input type="email" id="email" required placeholder="testtest@email.coom"></div>
+                    <div class="form"><input type="email" name="email" id="email" required
+                            placeholder="testtest@email.coom"></div>
                 </div>
 
                 <div class="checkbox">
-                    <label for="">志望動機<span>必須</span></label>
+                    <p>志望動機<span>必須</span></p>
                     <div class="check">
-                        <p><input type="checkbox">起業したい</p>
-                        <p><input type="checkbox">チーズ系企業に就職・転職したい</p>
-                        <p><input type="checkbox">チーズと関わる仕事をしており，仕事に生かしたい</p>
-                        <p><input type="checkbox">チーズの教養を身につけたい</p>
+                        <label for="business"><input type="checkbox" id="business" value="起業したい">起業したい</label><br>
+                        <label for="job_change"><input type="checkbox" id="job_change"
+                                value="チーズ系企業に就職・転職したい">チーズ系企業に就職・転職したい</label><br>
+                        <label for="work"><input type="checkbox" id="work"
+                                value="チーズと関わる仕事をしており，仕事に生かしたい">チーズと関わる仕事をしており，仕事に生かしたい</label><br>
+                        <label for="culture"><input type="checkbox" id="culture"
+                                value="チーズの教養を身につけたい">チーズの教養を身につけたい</label>
                     </div>
                 </div>
 
                 <div class="textarea">
                     <label for="detail">詳細<span>必須</span></label>
-                    <textarea name="" id="" cols="30" rows="10" id="detail" required></textarea>
+                    <textarea name="detail" id="detail" cols="30" rows="10" required></textarea>
                 </div>
 
                 <div class="btn">
@@ -236,9 +273,10 @@
 
         </section>
 
-        <div class="page-top">
-            ページトップへ戻る
-        </div>
+
+        <a class="pagetop" href="#">
+            <div class="pagetop__arrow"></div>
+        </a>
 
 
     </main>

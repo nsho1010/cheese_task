@@ -9,6 +9,7 @@
 -----------------*/
 
 
+
 html {
 	scroll-behavior: smooth;
 }
@@ -62,6 +63,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	color: aliceblue;
+	overflow: hidden;
 
 }
 
@@ -185,9 +187,6 @@ nav ul li {
 	height: 500px;
 }
 
-.about_image img {
-	width: 100%;
-}
 
 
 /* course
@@ -433,6 +432,10 @@ label {
 	margin-top: 40px;
 }
 
+.checkbox p {
+	width: 160px;
+}
+
 .check {
 	width: 390px;
 	margin-left: 120px;
@@ -479,13 +482,38 @@ button {
 	margin-top: 40px;
 	margin-bottom: 150px;
 	border-radius: 30px;
-	box-shadow: 0 5px 0 #ca1c30;
+	box-shadow: 0 5px 0 #a68a10;
 	cursor: pointer;
 }
 
 button:active {
 	box-shadow: none;
 	transform: translateY(5px);
+}
+
+
+
+.pagetop {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+	background: #fff;
+	border: solid 2px #000;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+}
+
+.pagetop__arrow {
+	height: 10px;
+	width: 10px;
+	border-top: 3px solid #000;
+	border-right: 3px solid #000;
+	transform: translateY(20%) rotate(-45deg);
 }
 
 /* footer
@@ -543,4 +571,34 @@ footer {
 	100% {
 		opacity: 1;
 	}
+}
+
+@keyframes loop {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.scroll {
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	height: 180px;
+	overflow-y: hidden;
+	border: 0.5px solid;
+	padding: 30px;
+	max-width: 100%;
+}
+
+.scroll-list {
+	display: flex;
+	align-items: center;
+	animation: loop infinite linear 30s both;
+
+
 }
