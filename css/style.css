@@ -1,16 +1,3 @@
-/*全体　共通
-最初から設定してあるので特に変更
-しなくても大丈夫です♪
-
-
-
-
-
------------------*/
-
-
-
-
 html {
 	scroll-behavior: smooth;
 }
@@ -22,7 +9,6 @@ body {
 	margin: 0 auto;
 }
 
-/*　パディングをサイズ内側にする処理　*/
 * {
 	padding: 0;
 	margin: 0;
@@ -33,24 +19,8 @@ body {
 	box-sizing: border-box;
 }
 
-/*ーーーーーーーーーーー*/
-/*この下から記述*/
-/*ーーーーーーーーーーー*/
-
-
-
-
-
-
-/*どの部分のcssに対して
-命令をしているのかコメントを
-記載しよう！
----------------------*/
-
-
 /* header
 ---------------------*/
-
 header {
 	background: -moz-linear-gradient(left, #ffd61a, #FFF);
 	background: -webkit-linear-gradient(left, #ffd61a, #FFF);
@@ -65,7 +35,6 @@ header {
 	justify-content: center;
 	align-items: center;
 }
-
 
 header li:hover {
 	transform: rotate(12deg);
@@ -110,7 +79,8 @@ nav ul li {
 	font-size: 18px;
 }
 
-
+/* main */
+/* ---------------------*/ 
 .main_image {
 	background: url(../img/mainbg.png);
 	background-size: cover;
@@ -118,24 +88,20 @@ nav ul li {
 	height: 600px;
 	width: 100%;
 	margin-top: 80px;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	color: aliceblue;
 	overflow: hidden;
-
 }
 
 .main_image h1,
 .main_image p {
 	animation-name: fadeIn;
 	animation-duration: 2s;
-
 	margin-bottom: 0.2rem;
 	padding: 1rem 1rem calc(1rem + 10px);
-	/* background: #3B3937; */
 	color: white;
 	text-shadow:
 		-1px 1px #999,
@@ -153,10 +119,8 @@ nav ul li {
 	border-radius: 20px;
 }
 
-
 /* about
 ---------------------*/
-
 .about {
 	width: 100%;
 }
@@ -170,8 +134,6 @@ nav ul li {
 	color: #ffd61a;
 	margin-top: 120px;
 	margin-bottom: 24px;
-
-	animation: 3s linear infinite rotation1;
 }
 
 .description p:nth-child(1) {
@@ -204,11 +166,8 @@ nav ul li {
 	height: 500px;
 }
 
-
-
 /* course
 ---------------------*/
-
 #course {
 	width: 100%;
 }
@@ -254,7 +213,6 @@ nav ul li {
 
 /* news
 ---------------------*/
-
 #news {
 	width: 100%;
 	display: flex;
@@ -272,7 +230,6 @@ nav ul li {
 #ticKer {
 	box-shadow: 1px 5px 4px rgb(118, 112, 112);
 }
-
 
 #wrapper {
 	display: block;
@@ -303,13 +260,11 @@ nav ul li {
 
 #ticKer ul {
 	padding: 0;
-	/* 内側余白*/
 	margin: 0 auto;
 }
 
 #ticKer li {
 	list-style-type: none;
-	/* リストマーク なし */
 	line-height: 2.5em;
 	padding-left: 25px;
 	color: #000;
@@ -317,8 +272,6 @@ nav ul li {
 	font-size: 16px;
 	text-align: center;
 }
-
-
 
 .news_text h2 {
 	font-size: 40px;
@@ -394,6 +347,11 @@ nav ul li {
 	margin-bottom: 24px;
 }
 
+.map {
+	width: 100%;
+	overflow: hidden;
+}
+
 iframe {
 	height: 380px;
 }
@@ -415,9 +373,6 @@ td {
 
 /* contact
 ---------------------*/
-
-
-
 .contact_text {
 	text-align: center;
 	margin-bottom: 80px;
@@ -440,7 +395,6 @@ span {
 	margin-bottom: 20px;
 }
 
-
 .contact_text p:nth-child(2) {
 	margin-bottom: 40px;
 }
@@ -452,7 +406,6 @@ span {
 .contact_text p:nth-child(4) {
 	margin-bottom: 80px;
 }
-
 
 .name,
 .kana,
@@ -514,7 +467,6 @@ textarea {
 	justify-content: center;
 }
 
-
 button {
 	background-color: #ffd61a;
 	border: 1px solid #ffd61a;
@@ -533,8 +485,6 @@ button:active {
 	box-shadow: none;
 	transform: translateY(5px);
 }
-
-
 
 .pagetop {
 	height: 50px;
@@ -561,7 +511,6 @@ button:active {
 
 /* footer
 ---------------------*/
-
 .sns img {
 	margin-left: 15px;
 	margin-bottom: 20px;
@@ -575,10 +524,6 @@ footer {
 	padding-bottom: 32px;
 	text-align: center;
 }
-
-
-
-
 
 /* アニメーション
 ---------------------*/
@@ -594,8 +539,6 @@ footer {
 		transform: translateY(0);
 	}
 }
-
-
 
 @keyframes rotation1 {
 	0% {
@@ -624,40 +567,34 @@ footer {
 }
 
 @keyframes loop {
-	from {
-		transform: translateX(0);
-	}
-
-	to {
-		transform: translateX(-100%);
-	}
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .scroll {
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	height: 180px;
-	overflow-y: hidden;
-	border: 0.5px solid;
-	padding: 30px;
-	max-width: 100%;
+    display: flex;
+    align-items: center;
+    height: 180px;
+    overflow: hidden;
+    padding: 30px;
+    max-width: 100%;
 }
 
 .scroll-list {
-	display: flex;
-	align-items: center;
-	animation: loop infinite linear 30s both;
-
-
+    display: flex;
+    align-items: center;
+    animation: loop 30s linear infinite;
+    width: 200%; /* 2倍の幅に設定 */
 }
 
-
-
-
-
-
+.scroll-list li {
+    list-style: none;
+    width: 12.5%; /* 画像の幅を調整 */
+}
 
 @keyframes fadeOut {
 	from {
@@ -697,7 +634,6 @@ footer {
 	position: absolute;
 	top: 0;
 	left: 0;
-
 	-webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
 	animation: sk-cubemove 1.8s infinite ease-in-out;
 }
