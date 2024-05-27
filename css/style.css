@@ -162,6 +162,27 @@ nav ul li {
 	height: 500px;
 }
 
+.scroll {
+    display: flex;
+    align-items: center;
+    height: 180px;
+    overflow: hidden;
+    padding: 30px;
+    max-width: 100%;
+}
+
+.scroll-list {
+    display: flex;
+    align-items: center;
+    animation: loop 30s linear infinite;
+    width: 200%; /* 2倍の幅に設定 */
+}
+
+.scroll-list li {
+    list-style: none;
+    width: 12.5%; /* 画像の幅を調整 */
+}
+
 /* course
 ---------------------*/
 #course {
@@ -556,27 +577,6 @@ footer {
     100% {
         transform: translateX(-50%);
     }
-}
-
-.scroll {
-    display: flex;
-    align-items: center;
-    height: 180px;
-    overflow: hidden;
-    padding: 30px;
-    max-width: 100%;
-}
-
-.scroll-list {
-    display: flex;
-    align-items: center;
-    animation: loop 30s linear infinite;
-    width: 200%; /* 2倍の幅に設定 */
-}
-
-.scroll-list li {
-    list-style: none;
-    width: 12.5%; /* 画像の幅を調整 */
 }
 
 @keyframes fadeOut {
