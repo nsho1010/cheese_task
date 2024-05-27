@@ -319,17 +319,17 @@ nav ul li {
 
 .more {
 	background-color: #ffd61a;
-	width: 300px;
-	height: 60px;
+	width: 220px;
+	height: 42px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 21px;
 	margin-top: 56px;
 	color: #efefef;
-	border-radius: 20px;
+	border-radius: 40px;
 	cursor: pointer;
-	border: 2px solid black;
+	border: 1.4px solid black;
 }
 
 .more a {
